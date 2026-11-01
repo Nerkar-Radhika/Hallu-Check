@@ -1,0 +1,8 @@
+{
+  "name": "HalluCheck",
+  "description": "Detect hallucinations in AI-generated text using atomic claim extraction, verification against source documents or Google Search grounding, and interactive evidence inspection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,526 @@
+[
+  {
+    "id": "chk_mub296cu_1qsdc1",
+    "createdAt": "2026-09-21T09:46:35.502Z",
+    "aiAnswer": "The patient received 100mg of medication. No headaches were reported.",
+    "sourceDocument": "Subject was given 100mg of medication. 5% of subjects reported mild headaches.",
+    "groundingType": "source_document",
+    "trustScore": 50,
+    "stats": {
+      "total": 2,
+      "supported": 1,
+      "contradicted": 1,
+      "unverifiable": 0
+    },
+    "claims": [
+      {
+        "id": "claim_1",
+        "claim": "The patient was administered 100mg of medication.",
+        "originalQuote": "The patient received 100mg of medication.",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "The source document confirms that the subject was given 100mg of medication.",
+        "evidence_snippet": "Subject was given 100mg of medication."
+      },
+      {
+        "id": "claim_2",
+        "claim": "No headaches were reported by the patient.",
+        "originalQuote": "No headaches were reported.",
+        "verdict": "Contradicted",
+        "confidence": 1,
+        "reason": "The source document explicitly states that 5% of subjects reported mild headaches, contradicting the claim of zero reports.",
+        "evidence_snippet": "5% of subjects reported mild headaches."
+      }
+    ],
+    "model": "gemini-2.5-flash"
+  },
+  {
+    "id": "chk_mub28xoz_qur33n",
+    "createdAt": "2026-09-21T09:46:24.275Z",
+    "aiAnswer": "The Apollo 11 mission landed on the Moon in July 1969. Neil Armstrong was the first man to walk on the lunar surface, followed shortly by John Glenn.",
+    "groundingType": "google_search",
+    "trustScore": 67,
+    "stats": {
+      "total": 3,
+      "supported": 2,
+      "contradicted": 1,
+      "unverifiable": 0
+    },
+    "claims": [
+      {
+        "id": "claim_1",
+        "claim": "The Apollo 11 mission landed on the Moon in July 1969.",
+        "originalQuote": "The Apollo 11 mission landed on the Moon in July 1969.",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "Historical records from NASA confirm the Apollo 11 lunar module landed on July 20, 1969.",
+        "evidence_snippet": "The Apollo 11 mission landed on the Moon on July 20, 1969."
+      },
+      {
+        "id": "claim_2",
+        "claim": "Neil Armstrong was the first man to walk on the lunar surface.",
+        "originalQuote": "Neil Armstrong was the first man to walk on the lunar surface",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "Neil Armstrong is universally documented as the first human to step onto the lunar surface during the Apollo 11 mission.",
+        "evidence_snippet": "Neil Armstrong became the first human to step onto the lunar surface on July 20, 1969."
+      },
+      {
+        "id": "claim_3",
+        "claim": "John Glenn was the second man to walk on the lunar surface.",
+        "originalQuote": "followed shortly by John Glenn.",
+        "verdict": "Contradicted",
+        "confidence": 1,
+        "reason": "Buzz Aldrin, not John Glenn, was the second person to walk on the moon, and John Glenn never walked on the moon.",
+        "evidence_snippet": "Buzz Aldrin joined Neil Armstrong on the lunar surface; John Glenn was the first American to orbit the Earth but never walked on the Moon."
+      }
+    ],
+    "model": "gemini-2.5-flash"
+  },
+  {
+    "id": "chk_mub24xe4_0lupdr",
+    "createdAt": "2026-09-21T09:43:17.260Z",
+    "aiAnswer": "Python is a high-level programming language conceived and created by Google in 2005. It was designed primarily by Dennis Ritchie to replace C++ for machine learning applications. Python was named after Monty Python's Flying Circus and emphasizes code readability with its distinctive use of significant indentation.",
+    "groundingType": "google_search",
+    "trustScore": 50,
+    "stats": {
+      "total": 8,
+      "supported": 4,
+      "contradicted": 4,
+      "unverifiable": 0
+    },
+    "claims": [
+      {
+        "id": "claim_1",
+        "claim": "Python is a high-level programming language.",
+        "originalQuote": "Python is a high-level programming language",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "Python is widely classified as a high-level, interpreted, general-purpose programming language.",
+        "evidence_snippet": "Python is a high-level, interpreted, general-purpose programming language."
+      },
+      {
+        "id": "claim_2",
+        "claim": "Python was created by Google.",
+        "originalQuote": "conceived and created by Google",
+        "verdict": "Contradicted",
+        "confidence": 1,
+        "reason": "Python was created by Guido van Rossum, not by Google.",
+        "evidence_snippet": "Python was conceived in the late 1980s by Guido van Rossum at Centrum Wiskunde & Informatica (CWI) in the Netherlands."
+      },
+      {
+        "id": "claim_3",
+        "claim": "Python was created in 2005.",
+        "originalQuote": "in 2005",
+        "verdict": "Contradicted",
+        "confidence": 1,
+        "reason": "Python was first released in 1991, and its development began in the late 1980s.",
+        "evidence_snippet": "Python was first released in 1991."
+      },
+      {
+        "id": "claim_4",
+        "claim": "Dennis Ritchie designed Python.",
+        "originalQuote": "It was designed primarily by Dennis Ritchie",
+        "verdict": "Contradicted",
+        "confidence": 1,
+        "reason": "Dennis Ritchie is known for creating C and Unix; Python was created by Guido van Rossum.",
+        "evidence_snippet": "Python was created by Guido van Rossum."
+      },
+      {
+        "id": "claim_5",
+        "claim": "Python was designed to replace C++ for machine learning applications.",
+        "originalQuote": "to replace C++ for machine learning applications",
+        "verdict": "Contradicted",
+        "confidence": 0.9,
+        "reason": "Python was initially created as a successor to the ABC programming language, not specifically to replace C++ for machine learning.",
+        "evidence_snippet": "Python was conceived in the late 1980s as a successor to the ABC language."
+      },
+      {
+        "id": "claim_6",
+        "claim": "Python was named after the television show Monty Python's Flying Circus.",
+        "originalQuote": "Python was named after Monty Python's Flying Circus",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "Guido van Rossum chose the name from the British comedy group Monty Python.",
+        "evidence_snippet": "Van Rossum chose the name Python for the language after being in a 'slightly irreverent mood' and a big fan of Monty Python's Flying Circus."
+      },
+      {
+        "id": "claim_7",
+        "claim": "Python emphasizes code readability.",
+        "originalQuote": "emphasizes code readability",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "Code readability is a core design philosophy of Python.",
+        "evidence_snippet": "Python's design philosophy emphasizes code readability."
+      },
+      {
+        "id": "claim_8",
+        "claim": "Python uses significant indentation.",
+        "originalQuote": "with its distinctive use of significant indentation",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "Python uses whitespace indentation to delimit code blocks instead of curly braces.",
+        "evidence_snippet": "Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects, utilizing significant indentation."
+      }
+    ],
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "id": "chk_mub24jed_6pj7t0",
+    "createdAt": "2026-09-21T09:42:59.125Z",
+    "aiAnswer": "Python is a high-level programming language conceived and created by Google in 2005. It was designed primarily by Dennis Ritchie to replace C++ for machine learning applications. Python was named after Monty Python's Flying Circus and emphasizes code readability with its distinctive use of significant indentation.",
+    "groundingType": "google_search",
+    "trustScore": 43,
+    "stats": {
+      "total": 7,
+      "supported": 3,
+      "contradicted": 4,
+      "unverifiable": 0
+    },
+    "claims": [
+      {
+        "id": "claim_1",
+        "claim": "Python is a high-level programming language.",
+        "originalQuote": "Python is a high-level programming language",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "Python is widely classified as a high-level, general-purpose programming language.",
+        "evidence_snippet": "Python is a high-level, general-purpose programming language."
+      },
+      {
+        "id": "claim_2",
+        "claim": "Python was created by Google.",
+        "originalQuote": "conceived and created by Google",
+        "verdict": "Contradicted",
+        "confidence": 1,
+        "reason": "Python was created by Guido van Rossum, not Google.",
+        "evidence_snippet": "Python was conceived in the late 1980s by Guido van Rossum at Centrum Wiskunde & Informatica (CWI) in the Netherlands."
+      },
+      {
+        "id": "claim_3",
+        "claim": "Python was created in 2005.",
+        "originalQuote": "in 2005",
+        "verdict": "Contradicted",
+        "confidence": 1,
+        "reason": "Python was first released in 1991, with development beginning in the late 1980s.",
+        "evidence_snippet": "Guido van Rossum began working on Python in the late 1980s, as a successor to the ABC programming language, and first released it in 1991."
+      },
+      {
+        "id": "claim_4",
+        "claim": "Dennis Ritchie designed Python.",
+        "originalQuote": "designed primarily by Dennis Ritchie",
+        "verdict": "Contradicted",
+        "confidence": 1,
+        "reason": "Dennis Ritchie is known for creating the C programming language and Unix, not Python.",
+        "evidence_snippet": "Python was created by Guido van Rossum."
+      },
+      {
+        "id": "claim_5",
+        "claim": "Python was designed to replace C++ for machine learning applications.",
+        "originalQuote": "to replace C++ for machine learning applications",
+        "verdict": "Contradicted",
+        "confidence": 0.95,
+        "reason": "Python was designed as a successor to the ABC language and intended for general-purpose programming; its popularity in machine learning came much later.",
+        "evidence_snippet": "Python was conceived in the late 1980s as a successor to the ABC programming language."
+      },
+      {
+        "id": "claim_6",
+        "claim": "Python was named after Monty Python's Flying Circus.",
+        "originalQuote": "Python was named after Monty Python's Flying Circus",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "The creator of Python, Guido van Rossum, named the language after the BBC comedy series Monty Python's Flying Circus.",
+        "evidence_snippet": "The language's name is derived from the British comedy group Monty Python, creators of the sketch comedy series Monty Python's Flying Circus."
+      },
+      {
+        "id": "claim_7",
+        "claim": "Python uses significant indentation to emphasize code readability.",
+        "originalQuote": "emphasizes code readability with its distinctive use of significant indentation",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "Python uses off-side rule indentation to define code blocks, which is a core design philosophy emphasizing readability.",
+        "evidence_snippet": "Python's design philosophy emphasizes code readability with its notable use of significant indentation."
+      }
+    ],
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "id": "chk_mub1rx1l_2nbj3p",
+    "createdAt": "2026-09-21T09:33:10.281Z",
+    "aiAnswer": "Python is a high-level programming language conceived and created by Google in 2005. It was designed primarily by Dennis Ritchie to replace C++ for machine learning applications. Python was named after Monty Python's Flying Circus and emphasizes code readability with its distinctive use of significant indentation.",
+    "groundingType": "google_search",
+    "trustScore": 50,
+    "stats": {
+      "total": 8,
+      "supported": 4,
+      "contradicted": 4,
+      "unverifiable": 0
+    },
+    "claims": [
+      {
+        "id": "claim_1",
+        "claim": "Python is a high-level programming language.",
+        "originalQuote": "Python is a high-level programming language",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "Python is universally classified in computer science as a high-level, interpreted programming language.",
+        "evidence_snippet": "Python is a high-level, interpreted, general-purpose programming language."
+      },
+      {
+        "id": "claim_2",
+        "claim": "Python was created by Google.",
+        "originalQuote": "conceived and created by Google",
+        "verdict": "Contradicted",
+        "confidence": 1,
+        "reason": "Python was created by Guido van Rossum, not Google.",
+        "evidence_snippet": "Python was conceived in the late 1980s by Guido van Rossum at CWI in the Netherlands."
+      },
+      {
+        "id": "claim_3",
+        "claim": "Python was created in 2005.",
+        "originalQuote": "in 2005",
+        "verdict": "Contradicted",
+        "confidence": 1,
+        "reason": "Python was released in 1991, not 2005.",
+        "evidence_snippet": "Guido van Rossum began implementation of Python in December 1989 and it was first released in 1991."
+      },
+      {
+        "id": "claim_4",
+        "claim": "Dennis Ritchie designed Python.",
+        "originalQuote": "It was designed primarily by Dennis Ritchie",
+        "verdict": "Contradicted",
+        "confidence": 1,
+        "reason": "Dennis Ritchie is known for creating the C programming language; Guido van Rossum created Python.",
+        "evidence_snippet": "Python was designed by Guido van Rossum."
+      },
+      {
+        "id": "claim_5",
+        "claim": "Python was created to replace C++ for machine learning applications.",
+        "originalQuote": "to replace C++ for machine learning applications.",
+        "verdict": "Contradicted",
+        "confidence": 1,
+        "reason": "Python was created as a successor to the ABC language for general-purpose programming, long before machine learning became a primary use case.",
+        "evidence_snippet": "Python was intended as a successor to the ABC programming language, capable of exception handling and interfacing with the Amoeba operating system."
+      },
+      {
+        "id": "claim_6",
+        "claim": "Python was named after Monty Python's Flying Circus.",
+        "originalQuote": "Python was named after Monty Python's Flying Circus",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "The creator, Guido van Rossum, named the language after the British comedy troupe.",
+        "evidence_snippet": "Van Rossum named the language Python after the British comedy group Monty Python."
+      },
+      {
+        "id": "claim_7",
+        "claim": "Python emphasizes code readability.",
+        "originalQuote": "emphasizes code readability",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "Readability is a core design philosophy of Python, explicitly mentioned in the Zen of Python.",
+        "evidence_snippet": "Python's design philosophy emphasizes code readability with its notable use of significant whitespace."
+      },
+      {
+        "id": "claim_8",
+        "claim": "Python uses significant indentation.",
+        "originalQuote": "distinctive use of significant indentation.",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "Python uses indentation to define code blocks instead of curly braces.",
+        "evidence_snippet": "Python features a design philosophy that emphasizes code readability, and its syntax is noted for its use of significant indentation."
+      }
+    ],
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "id": "chk_mub1q9wi_v0528p",
+    "createdAt": "2026-09-21T09:31:53.634Z",
+    "aiAnswer": "The Apollo 11 mission was launched on July 16, 1969, by NASA from Kennedy Space Center. The lunar module Eagle landed on the Moon on July 20, 1969, in the Sea of Tranquility. Commander Neil Armstrong was the first person to walk on the lunar surface, followed shortly by astronaut John Glenn. The crew safely returned to Earth on July 24, splashing down in the Pacific Ocean.",
+    "groundingType": "google_search",
+    "trustScore": 88,
+    "stats": {
+      "total": 8,
+      "supported": 7,
+      "contradicted": 1,
+      "unverifiable": 0
+    },
+    "claims": [
+      {
+        "id": "claim_1",
+        "claim": "The Apollo 11 mission was launched on July 16, 1969.",
+        "originalQuote": "The Apollo 11 mission was launched on July 16, 1969",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "Official NASA mission records confirm the launch date of Apollo 11 as July 16, 1969.",
+        "evidence_snippet": "Apollo 11 launched from Kennedy Space Center Launch Complex 39A at 9:32 a.m. EDT on July 16, 1969."
+      },
+      {
+        "id": "claim_2",
+        "claim": "The Apollo 11 mission was launched by NASA from Kennedy Space Center.",
+        "originalQuote": "by NASA from Kennedy Space Center",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "NASA records confirm the Apollo 11 mission originated from the Kennedy Space Center.",
+        "evidence_snippet": "Apollo 11 launched from Kennedy Space Center Launch Complex 39A"
+      },
+      {
+        "id": "claim_3",
+        "claim": "The lunar module Eagle landed on the Moon on July 20, 1969.",
+        "originalQuote": "The lunar module Eagle landed on the Moon on July 20, 1969",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "The lunar module Eagle landed on the Moon at 20:17 UTC on July 20, 1969.",
+        "evidence_snippet": "The Lunar Module Eagle landed at 20:17 UTC on July 20, 1969."
+      },
+      {
+        "id": "claim_4",
+        "claim": "The lunar module Eagle landed in the Sea of Tranquility.",
+        "originalQuote": "in the Sea of Tranquility",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "The designated landing site for the Eagle was the Sea of Tranquility (Mare Tranquillitatis).",
+        "evidence_snippet": "The landing occurred in the Sea of Tranquility."
+      },
+      {
+        "id": "claim_5",
+        "claim": "Neil Armstrong was the first person to walk on the lunar surface.",
+        "originalQuote": "Commander Neil Armstrong was the first person to walk on the lunar surface",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "Neil Armstrong is universally documented as the first human to step onto the lunar surface during the Apollo 11 mission.",
+        "evidence_snippet": "Neil Armstrong became the first human to step onto the lunar surface."
+      },
+      {
+        "id": "claim_6",
+        "claim": "John Glenn walked on the lunar surface shortly after Neil Armstrong.",
+        "originalQuote": "followed shortly by astronaut John Glenn",
+        "verdict": "Contradicted",
+        "confidence": 1,
+        "reason": "Buzz Aldrin was the second person to walk on the Moon, not John Glenn. John Glenn never walked on the Moon.",
+        "evidence_snippet": "Buzz Aldrin joined Armstrong on the surface shortly thereafter."
+      },
+      {
+        "id": "claim_7",
+        "claim": "The Apollo 11 crew returned to Earth on July 24, 1969.",
+        "originalQuote": "The crew safely returned to Earth on July 24",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "NASA records show the mission concluded with splashdown on July 24, 1969.",
+        "evidence_snippet": "The Apollo 11 crew splashed down in the Pacific Ocean on July 24, 1969."
+      },
+      {
+        "id": "claim_8",
+        "claim": "The Apollo 11 crew splashed down in the Pacific Ocean.",
+        "originalQuote": "splashing down in the Pacific Ocean",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "NASA mission documentation confirms the splashdown location was the Pacific Ocean.",
+        "evidence_snippet": "The Apollo 11 crew splashed down in the Pacific Ocean on July 24, 1969."
+      }
+    ],
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "id": "chk_mub1hujm_6eg1uc",
+    "createdAt": "2026-09-21T09:25:20.482Z",
+    "aiAnswer": "The study showed an 80% recovery rate with zero reported headaches.",
+    "sourceDocument": "In our clinical study of 100 participants, 80% achieved full recovery. 12% of participants reported mild headaches.",
+    "groundingType": "source_document",
+    "trustScore": 50,
+    "stats": {
+      "total": 2,
+      "supported": 1,
+      "contradicted": 1,
+      "unverifiable": 0
+    },
+    "claims": [
+      {
+        "id": "claim_1",
+        "claim": "The recovery rate in the study was 80%.",
+        "originalQuote": "The study showed an 80% recovery rate",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "The source document explicitly states that 80% of the 100 participants achieved full recovery.",
+        "evidence_snippet": "80% achieved full recovery"
+      },
+      {
+        "id": "claim_2",
+        "claim": "There were zero reported headaches in the study.",
+        "originalQuote": "zero reported headaches",
+        "verdict": "Contradicted",
+        "confidence": 1,
+        "reason": "The source document states that 12% of participants reported mild headaches, which contradicts the claim of zero.",
+        "evidence_snippet": "12% of participants reported mild headaches."
+      }
+    ],
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "id": "chk_mub1hmcs_lfsx67",
+    "createdAt": "2026-09-21T09:25:09.868Z",
+    "aiAnswer": "Neil Armstrong landed on the Moon in 1969. He was accompanied on the lunar surface by John Glenn.",
+    "groundingType": "google_search",
+    "trustScore": 50,
+    "stats": {
+      "total": 2,
+      "supported": 1,
+      "contradicted": 1,
+      "unverifiable": 0
+    },
+    "claims": [
+      {
+        "id": "claim_1",
+        "claim": "Neil Armstrong landed on the Moon in 1969.",
+        "originalQuote": "Neil Armstrong landed on the Moon in 1969.",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "Historical records from NASA confirm that Neil Armstrong, as part of the Apollo 11 mission, became the first human to land on the Moon on July 20, 1969.",
+        "evidence_snippet": "Neil Armstrong was the first person to walk on the Moon. He stepped onto the lunar surface on July 20, 1969, as part of the Apollo 11 mission."
+      },
+      {
+        "id": "claim_2",
+        "claim": "John Glenn accompanied Neil Armstrong on the lunar surface.",
+        "originalQuote": "He was accompanied on the lunar surface by John Glenn.",
+        "verdict": "Contradicted",
+        "confidence": 1,
+        "reason": "Neil Armstrong was accompanied on the lunar surface by Buzz Aldrin, not John Glenn. John Glenn was the first American to orbit the Earth but never walked on the Moon.",
+        "evidence_snippet": "Buzz Aldrin joined Neil Armstrong on the surface of the Moon during the Apollo 11 mission."
+      }
+    ],
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "id": "chk_mub1gzd7_shcqtv",
+    "createdAt": "2026-09-21T09:24:40.075Z",
+    "aiAnswer": "Neil Armstrong landed on the Moon in 1969. He was accompanied on the lunar surface by John Glenn.",
+    "groundingType": "google_search",
+    "trustScore": 50,
+    "stats": {
+      "total": 2,
+      "supported": 1,
+      "contradicted": 1,
+      "unverifiable": 0
+    },
+    "claims": [
+      {
+        "id": "claim_1",
+        "claim": "Neil Armstrong landed on the Moon in 1969.",
+        "originalQuote": "Neil Armstrong landed on the Moon in 1969.",
+        "verdict": "Supported",
+        "confidence": 1,
+        "reason": "Neil Armstrong landed on the lunar surface on July 20, 1969, as commander of NASA's Apollo 11 mission.",
+        "evidence_snippet": "On July 20, 1969, American astronauts Neil Armstrong and Buzz Aldrin landed the Apollo Lunar Module Eagle on the Moon."
+      },
+      {
+        "id": "claim_2",
+        "claim": "Neil Armstrong was accompanied on the lunar surface by John Glenn.",
+        "originalQuote": "He was accompanied on the lunar surface by John Glenn.",
+        "verdict": "Contradicted",
+        "confidence": 1,
+        "reason": "Neil Armstrong was accompanied on the lunar surface by Edwin 'Buzz' Aldrin, not John Glenn. John Glenn never walked on the Moon.",
+        "evidence_snippet": "Neil Armstrong became the first person to step onto the lunar surface six hours and 39 minutes later on July 21 at 02:56 UTC; Buzz Aldrin joined him 19 minutes later."
+      }
+    ],
+    "model": "gemini-2.5-flash"
+  }
+]

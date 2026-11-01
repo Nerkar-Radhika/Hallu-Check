@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "HalluCheck": {
+      "title": "HalluCheck",
+      "description": "A saved hallucination verification check",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the verification check"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "ISO timestamp of when the check was created"
+        },
+        "aiAnswer": {
+          "type": "string",
+          "description": "Original AI-generated text analyzed",
+          "maxLength": 50000
+        },
+        "sourceDocument": {
+          "type": "string",
+          "description": "Optional ground truth source document",
+          "maxLength": 100000
+        },
+        "groundingType": {
+          "type": "string",
+          "description": "Grounding mechanism used: source_document or google_search"
+        },
+        "trustScore": {
+          "type": "number",
+          "description": "Trust score percentage from 0 to 100"
+        }
+      },
+      "required": ["id", "createdAt", "aiAnswer", "trustScore"]
+    }
+  },
+  "firestore": {
+    "/hallu_checks/{checkId}": {
+      "schema": "HalluCheck",
+      "description": "Collection storing hallucination check records"
+    }
+  }
+}
